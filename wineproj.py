@@ -38,10 +38,10 @@ xx, yy = np.meshgrid(
 Z = model.predict(np.c_[xx.ravel(), yy.ravel()])
 Z = Z.reshape(xx.shape)
 
-# Plot decision background
+# Plot background
 plt.contourf(xx, yy, Z, alpha=0.35, cmap="plasma")
 
-# Plot real points
+# Plot
 scatter = plt.scatter(X_2d[:,0], X_2d[:,1], c=y, edgecolors="black", cmap="plasma")
 
 plt.title("Wine Dataset Classification with PCA + Logistic Regression", fontsize=14)
@@ -49,7 +49,7 @@ plt.xlabel("PCA Component 1")
 plt.ylabel("PCA Component 2")
 
 
-# ✔ FIXED: Add Legend Manually
+# Legend 
 
 import matplotlib.patches as mpatches
 
@@ -61,3 +61,4 @@ plt.legend(handles=[class0, class1, class2], title="Wine Types")
 
 
 plt.show()
+
